@@ -10,6 +10,7 @@ namespace Salty
     public class SaltGenerator
     {
         private static SaltGenerator _instance;
+        private const int SIZE = 11;
 
         private SaltGenerator() { }
 
@@ -25,12 +26,12 @@ namespace Salty
 
         public string GenerateSaltString()
         {
-            int size = 11;
+            
 
-            byte[] salt = GenerateSalt(size);
+            byte[] salt = GenerateSalt(SIZE);
 
             string saltString = Convert.ToBase64String(salt);
-            saltString = saltString.Substring(0, size);
+            saltString = saltString.Substring(0, SIZE);
 
             return saltString;
         }
