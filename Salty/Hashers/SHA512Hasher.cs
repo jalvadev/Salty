@@ -8,24 +8,18 @@ using System.Threading.Tasks;
 
 namespace Salty.Hashers
 {
-    public class SHA256Hasher : IHasher
+    public class SHA512Hasher : IHasher
     {
+
         public string HashString(string stringToHash)
         {
-            string hash;
-
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                hash = GetHash(sha256, stringToHash);
-            }
-
-            return hash;
+            SHA512 sha512 = SHA512.Create();
+            return GetHash(sha512, stringToHash);
         }
 
-        private string GetHash(SHA256 sha256, string stringToHash)
+        private string GetHash(SHA512 sha512, string stringToHash)
         {
-            byte[] textBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(stringToHash));
-
+            byte[] textBytes = sha512.ComputeHash(Encoding.UTF8.GetBytes(stringToHash));
             var stringBuilder = new StringBuilder();
 
             for(int i = 0; i < textBytes.Length; i++)
@@ -42,7 +36,7 @@ namespace Salty.Hashers
 
             StringComparer comparer = StringComparer.OrdinalIgnoreCase;
 
-            return comparer.Compare(hashedString, hash) == 0;
+            return comparer.Compare(hash, hashedString) == 0;
         }
     }
 }

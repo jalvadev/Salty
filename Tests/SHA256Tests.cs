@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Tests
 {
     [TestFixture]
-    internal class HashTests
+    internal class SHA256Tests
     {
         [Test]
         public void IsSHA256GenerationOk_ReturnTrue()
