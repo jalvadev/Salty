@@ -24,5 +24,14 @@ namespace Salty
 
             return hashedPassword;
         }
+
+        public static bool ChekPasswordHash(IHasher hasher, string password, string salt, string hash)
+        {
+            var hashContext = new HashContext(hasher);
+
+            password += salt;
+
+            return hashContext.CheckHash(password, hash);
+        }
     }
 }
