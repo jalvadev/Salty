@@ -28,7 +28,7 @@ namespace Salty.Hashers
 
             var stringBuilder = new StringBuilder();
 
-            for(int i = 0; i > textBytes.Length; i++)
+            for(int i = 0; i < textBytes.Length; i++)
             {
                 stringBuilder.Append(textBytes[i].ToString("X2"));
             }
@@ -42,7 +42,7 @@ namespace Salty.Hashers
 
             using(SHA256 sha256 = SHA256.Create())
             {
-                hashedString = GetHash(sha256, hash);
+                hashedString = GetHash(sha256, stringToHash);
             }
 
             StringComparer comparer = StringComparer.OrdinalIgnoreCase;

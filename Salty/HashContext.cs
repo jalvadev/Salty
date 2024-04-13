@@ -20,5 +20,10 @@ namespace Salty
         {
             return _hasher.HashString(stringToHash);
         }
+
+        public bool CheckHash(string stringToHash, string hash)
+        {
+            return _hasher.CheckHash(stringToHash, hash);
+        }
     }
 }
