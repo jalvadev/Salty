@@ -28,7 +28,11 @@ namespace Salty
             int size = 11;
 
             byte[] salt = GenerateSalt(size);
-            return Convert.ToBase64String(salt);
+
+            string saltString = Convert.ToBase64String(salt);
+            saltString = saltString.Substring(0, size);
+
+            return saltString;
         }
 
         private byte[] GenerateSalt(int size)
