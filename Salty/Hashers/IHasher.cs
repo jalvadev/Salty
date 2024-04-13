@@ -9,5 +9,7 @@ namespace Salty.Hasher
     public interface IHasher
     {
         string HashString(string stringToHash);
+
+        bool CheckHash(string stringToHash, string hash);
     }
 }
