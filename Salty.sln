@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Salty", "Salty\Salty.csproj", "{917EB98A-96C0-494C-8818-AE0CA28BEC57}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "Console\Console.csproj", "{4A274A94-3DDD-4F30-AA4D-95AF8FCA7909}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{917EB98A-96C0-494C-8818-AE0CA28BEC57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{917EB98A-96C0-494C-8818-AE0CA28BEC57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{917EB98A-96C0-494C-8818-AE0CA28BEC57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A274A94-3DDD-4F30-AA4D-95AF8FCA7909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A274A94-3DDD-4F30-AA4D-95AF8FCA7909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A274A94-3DDD-4F30-AA4D-95AF8FCA7909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A274A94-3DDD-4F30-AA4D-95AF8FCA7909}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
