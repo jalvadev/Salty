@@ -19,8 +19,8 @@ This is the master class of this library, the PasswordManager. This class is des
 1. Generate hash for salted passwords: You only need to pass the hasher you want to use and the password you want to hash. The function will take care of salting the password before hashing it and return both hash and salt.
 ```
 PasswordResponse passwordResult = PasswordManager.GeneratePasswordHash(new SHA256Hasher(), insertedPassword);
-userHash = passwordResult.HashedPassword;
-userSalt = passwordResult.Salt;
+string userHash = passwordResult.HashedPassword;
+string userSalt = passwordResult.Salt;
 ```
 2. Verify if a hash belongs to a salted password. Here, you'll need to pass, on one side, the hasher to be used, the password entered by the user, and the corresponding salt for the presumed user. On the other side, you'll need to pass the hash to compare with the resulting hash.
 ```
