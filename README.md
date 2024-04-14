@@ -14,7 +14,7 @@ Salty is designed to handle all the work with its password hasher with salt. But
 
 ## PasswordManager
 
-Finally, the master class of this library, the PasswordManager. This class is designed for you to forget about everything and be able to manage your application's passwords easily. It has these two functions:
+This is the master class of this library, the PasswordManager. This class is designed for you to forget about everything and be able to manage your application's passwords easily. It has these two functions:
 
 1. Generate hash for salted passwords: You only need to pass the hasher you want to use and the password you want to hash. The function will take care of salting the password before hashing it and return both hash and salt.
 ```
