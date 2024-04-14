@@ -1,4 +1,5 @@
 ﻿using Salty.Hasher;
+using Salty.Responses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace Salty
     public static class PasswordManager
     {
 
-        public static string GeneratePasswordHash(IHasher hasher, string password)
+        public static PasswordResponse GeneratePasswordHash(IHasher hasher, string password)
         {
             string salt;
             string hashedPassword;
@@ -22,7 +23,7 @@ namespace Salty
             var hashContext = new HashContext(hasher);
             hashedPassword = hashContext.GenerateHash(password);
 
-            return hashedPassword;
+            return new PasswordResponse { HashedPassword = hashedPassword, Salt = salt };
         }
 
         public static bool ChekPasswordHash(IHasher hasher, string password, string salt, string hash)
