@@ -14,11 +14,13 @@ Salty is designed to handle all the work with its password hasher with salt. But
 
 ## PasswordManager
 
-Finally, the master class of this library, the PasswordManager. This class is designed for you to forget about everything and be able to manage your application's passwords easily. It has these two functions:
+This is the master class of this library, the PasswordManager. This class is designed for you to forget about everything and be able to manage your application's passwords easily. It has these two functions:
 
-1. Generate hash for salted passwords: You only need to pass the hasher you want to use and the password you want to hash. The function will take care of salting the password before hashing it.
+1. Generate hash for salted passwords: You only need to pass the hasher you want to use and the password you want to hash. The function will take care of salting the password before hashing it and return both hash and salt.
 ```
-string hashedPassword = PasswordManager.GeneratePasswordHash(new SHA256Hasher(), password);
+PasswordResponse passwordResult = PasswordManager.GeneratePasswordHash(new SHA256Hasher(), insertedPassword);
+string userHash = passwordResult.HashedPassword;
+string userSalt = passwordResult.Salt;
 ```
 2. Verify if a hash belongs to a salted password. Here, you'll need to pass, on one side, the hasher to be used, the password entered by the user, and the corresponding salt for the presumed user. On the other side, you'll need to pass the hash to compare with the resulting hash.
 ```
