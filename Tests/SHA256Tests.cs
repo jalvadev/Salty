@@ -77,7 +77,7 @@ namespace Tests
 
         private string[] GetPasswordsToTest()
         {
-            return [
+            return new string[]{
                 "8d18NZ1YgYaHCierT5",
                 "Q41CnxwvRYwDm75dqcwc",
                 "MnqXXPX2s590epHjhmKr",
@@ -86,12 +86,12 @@ namespace Tests
                 "hDTbGrgCsZ2NoVRhUu54",
                 "Jm2arjtwMwFinMhg4Pui",
                 "qbo9tMCfmR7JyHc5JMWW"
-            ];
+            };
         }
 
         private string[] GetHashedPasswordsToTest()
         {
-            return [
+            return new string[]{
                 "6CB5D385B3DA22015229DE6647D12CA75D1D65E2CDCC146CB749A398643701AA",
                 "EF55BED82C8EA7BF56F84CAFAED2ACB4853DEAB319EFCA67359552A027CA87C6",
                 "FAA555950A47A840F42F1D35835F08FDB9C63D9B3E34158CA956EE460CA40680",
@@ -100,7 +100,7 @@ namespace Tests
                 "214501B2AD2CBE71D4A8FDDAEBE83B7721CE0D2B82A91A25F0479A255B1975C9",
                 "B33B9DDAE991F51668E08C9E0EE78D095DD80E85355BAC73E16D0B4599CC7D42",
                 "698A7BB68AD859683E7F336F6A0AF1454448FBEFAAC5DC66B1D84258E7EFB3BE"
-            ];
+            };
         }
     }
 }
